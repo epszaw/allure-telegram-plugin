@@ -4,6 +4,8 @@
 
 The plugin sends notifications with short report and information about failed tests to Telgram chats, where the bot is added.
 
+<img width="487" alt="image" src="https://github.com/user-attachments/assets/d3385482-658a-41ac-9c20-cd0efec9a234" />
+
 ## Install
 
 Use your favorite package manager to install the package:
