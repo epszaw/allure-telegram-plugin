@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": ["./src"],
+  "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "sourceMap": false,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "declaration": true,
+    "lib": ["ESNext"],
+    "types": ["node"],
+    "module": "NodeNext",
+    "target": "ES2020",
+    "skipLibCheck": true,
+    "outDir": "./dist"
+  }
+}

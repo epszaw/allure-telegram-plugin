@@ -1,0 +1,72 @@
+{
+  "name": "allure-telegram-plugin",
+  "version": "1.0.0-beta.0",
+  "description": "Allure Plugin to Report results to Telegram",
+  "keywords": [
+    "allure",
+    "testing",
+    "report",
+    "plugin",
+    "telegram"
+  ],
+  "repository": "https://github.com/epszaw/allure-telegram-plugin",
+  "license": "Apache-2.0",
+  "author": "epszaw <k@epishev.me>",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "pnpm clean && tsc --project ./tsconfig.json",
+    "clean": "rimraf ./dist",
+    "eslint": "eslint ./src/**/*.{js,jsx,ts,tsx}",
+    "eslint:format": "eslint --fix ./src/**/*.{js,jsx,ts,tsx}",
+    "lint-staged": "lint-staged",
+    "prepare": "husky",
+    "test": "rimraf ./out && vitest run"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,yml,yaml,md}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@allurereport/core-api": "3.0.0-beta.10",
+    "@allurereport/plugin-api": "3.0.0-beta.10",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^2.6.1",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/eslint": "^8.56.11",
+    "@types/node": "^20.17.9",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitest/runner": "^2.1.8",
+    "allure-vitest": "^3.0.9",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^50.0.0",
+    "eslint-plugin-n": "^17.10.1",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-packagejson": "^2.5.10",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  }
+}
