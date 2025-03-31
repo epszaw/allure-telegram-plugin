@@ -35,6 +35,8 @@ export default defineConfig({
 });
 ```
 
+Then, you need to add the bot to a channel you want to send messages to.
+
 ### Using with Yarn PNP mode
 
 If you want to use the plugin with Yarn PNP mode, add entire path to the package:
